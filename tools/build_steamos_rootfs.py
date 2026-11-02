@@ -198,6 +198,14 @@ def build(args):
                 # The VR session also claims plasma.desktop, now supplied by
                 # the ordinary Plasma package used on the tablet.
                 guest(['pacman', '-Rdd', '--noconfirm', obsolete])
+        # Valve's holo-glibc-locales pins an exact glibc version. As soon as the
+        # repository ships a newer glibc the full transaction can no longer
+        # satisfy that pin (installing glibc breaks a dependency of the
+        # installed locales package). Drop the locales package first and let
+        # the regular glibc package provide locale data instead.
+        if subprocess.run(['chroot', root, 'pacman', '-Qq', 'holo-glibc-locales'],
+                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL).returncode == 0:
+            guest(['pacman', '-Rdd', '--noconfirm', 'holo-glibc-locales'])
         guest(['pacman', '-Syu', '--noconfirm'])
         packages = ['base-devel',
                'sddm', 'openssh', 'bluez', 'bluez-utils', 'networkmanager', 'wpa_supplicant',
