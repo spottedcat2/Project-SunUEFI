@@ -86,10 +86,10 @@
     },
     {
       "name": "kidletime",
-      "version": "6.24.0",
+      "version": "6.25.0",
       "pkgrel": "3",
-      "url": "https://download.kde.org/stable/frameworks/6.24/kidletime-6.24.0.tar.xz",
-      "sha256": "be8ce0c791900a1f55e9973bf5faefbe172740424ac9f254ba541552ba3ccb06",
+      "url": "https://download.kde.org/stable/frameworks/6.25/kidletime-6.25.0.tar.xz",
+      "sha256": "64e83d46a15b444017c6341e479e229bbd6cbb8320ef1359773737cee89dd7ca",
       "patches": [],
       "license": [
         "LGPL-2.0-only",
@@ -111,10 +111,10 @@
     },
     {
       "name": "kwindowsystem",
-      "version": "6.24.0",
+      "version": "6.25.0",
       "pkgrel": "3",
-      "url": "https://download.kde.org/stable/frameworks/6.24/kwindowsystem-6.24.0.tar.xz",
-      "sha256": "2291d95836e8b81263ceea0c1ffa7cfd92773130d6edd130b439874169f13e58",
+      "url": "https://download.kde.org/stable/frameworks/6.25/kwindowsystem-6.25.0.tar.xz",
+      "sha256": "b51448a7669efa18190ab7fa8d6f5e0f77d8f9879cf457dadb4629b245a02434",
       "patches": [],
       "license": [
         "LGPL-2.0-only",
